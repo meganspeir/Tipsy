@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+            <h1>
+                <li>
+                <a href="{{ url_for("view_task", id=task['id']) }}">Task {{ task['id'] }}</a>:
+                    {{ task['title'] }}
+                    {% if task['completed_at'] %} &mdash; Completed
+                    {% endif %}
+                </li>
+            </h1>
+            <h2>{{ task['title'] }}</h2>
+            <form action="/task/{{task['id']}}" method="POST">
+                <input type="submit" value="Complete Task">
+            </form>
+{% endblock %}

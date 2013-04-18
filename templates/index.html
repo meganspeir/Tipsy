@@ -1,8 +1,4 @@
-<html>
-<head>
-    <title>Tipsy</title>
-</head>
-<body>
-    <h1>Welcome to Tipsy, {{ user_name }}</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block body %}
+        <h1><center>Welcome to Tipsy, {{ user_name }}!<center></h1>
+{% endblock %}
